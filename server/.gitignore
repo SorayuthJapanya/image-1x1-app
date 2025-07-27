@@ -1,0 +1,17 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv/
+runs/
+src/datasets/
+src/test/
+src/train/
+src/models/best22.pt
+src/models/best32.pt
+src/models/yolo12n.pt
