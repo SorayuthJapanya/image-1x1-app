@@ -4,6 +4,8 @@ import { CloudUpload, Loader2, UploadCloud } from "lucide-react";
 import { useDropzone } from "react-dropzone";
 import { PreviewImage } from "./PreviewImage";
 
+const BASE_URL = import.meta.env.VITE_SERVER_URL
+
 export const DropzoneUploader = () => {
   const [files, setFiles] = useState<File[]>([]);
   const [uploading, setUploading] = useState(false);
@@ -35,7 +37,7 @@ export const DropzoneUploader = () => {
       });
 
       const response = await axios.post(
-        "http://localhost:8000/api/uploads/",
+        `${BASE_URL}/api/uploads/`,
         formData,
         { responseType: "blob" }
       );
