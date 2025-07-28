@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: image-1x1-app-server
+    env: python
+    buildCommand: ""
+    startCommand: ./start.sh
+    plan: free
+    branch: main
+    region: singapore
